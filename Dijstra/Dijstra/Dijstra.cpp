@@ -2,14 +2,21 @@
 //
 #define NM 100005
 #include <stdio.h>
+#include <malloc.h>
 
-int Ms[NM], N, M, start, end, x, y, heavy;
+int N, M, start, end, x, y, heavy;
+
+typedef struct NODE {
+	struct NODE *next;
+	struct NODE *before;
+	int data = 0;
+} node[NM];
 
 void input() {
 	scanf("%d %d %d %d", &N, &M, &start, &end);
+	//struct NODE *head = (NODE*)malloc(sizeof(struct NODE));
 	for (int i = 0; i < M; i++) {
 		scanf("%d %d %d", &x, &y, &heavy);
-
 	}
 }
 
